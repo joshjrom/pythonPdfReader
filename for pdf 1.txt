@@ -1,0 +1,24 @@
+pip install nltk
+pip install PyPDF2
+pip install textract
+
+import PyPDF2, urllib.request , nltk , textract
+from io import BytesIO
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+
+nltk.download('stopwords')  
+
+#Reading the PDF from web
+#wFile = urllib.request.urlopen('....pdf')
+#pdfreader = PyPDF2.pdf.PdfFileReader(BytesIO(wFile.read()) )
+
+#Reading the PDF from local file
+pdfFileObj = open('....pdf', 'rb')
+pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
+print(pdfReader.numPages)
+
+#extracting page 2 of the docuemnt
+pageObj = pdfReader.getPage(1)
+print(pageObj.extractText())
+#pdfFileObj.close()

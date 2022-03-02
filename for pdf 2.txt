@@ -10,7 +10,7 @@ from nltk.corpus import stopwords
 #pdfreader = PyPDF2.pdf.PdfFileReader(BytesIO(wFile.read()) )
 
 #Reading the PDF from local file
-pdfFileObj = open('C:/Users/Ayegba Joshua Arome/Documents/projects/python/pythonSandbox/Grace L. Samson Research Group.pdf', 'rb')
+pdfFileObj = open('C:/Users/hp/Dropbox/2021 Research/Grace L. Samson Research Group.pdf', 'rb')
 pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
 #print(pdfReader.numPages)
 
